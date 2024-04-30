@@ -1,0 +1,142 @@
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background-color: #caf0f8;
+}
+button{
+    appearance: none;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  outline: none;
+}
+
+.container {
+    width: 390px;
+    height: fit-content;
+    overflow: hidden;
+    background-color: #90e0ef;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.4);
+    border-radius: 15px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+#file-preview {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.upload-image-para {
+    position: absolute;
+    color: white;
+    font-size: 30px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.blur-box {
+    position: absolute;
+    width: 100%;
+    height: 260px;
+    background-color: black;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#file-preview:hover .upload-image-para {
+    opacity: 1;
+}
+
+#file-preview:hover .blur-box {
+    opacity: 0.2;
+}
+
+.mybanner {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 0 0;
+    cursor: pointer;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: red;
+    transition: transform 0.3s;
+    transform: scaleX(0);
+}
+
+.container:hover::before {
+    transform: scaleX(1);
+}
+
+
+/* name section  */
+
+.name-section{
+    width: 100%;
+    height: fit-content;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 15px;
+}
+.profile-btns{
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profile-details{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: transparent;
+}
+
+.myprofile {
+    margin: 10px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+/* notification */
+
+.message-container{
+    margin-top: 10px;
+    width: fit-content;
+    height: 60px;
+    padding: 0 10px 0 10px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 10px;
+}

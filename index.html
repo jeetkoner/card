@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="/style/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <label for="file-upload" id="upload-label">
+            <div id="file-preview">
+                <div class="blur-box"></div>
+                <p class="upload-image-para">Upload image</p>
+                <img src="/assets/banner.jpg" alt="" class="mybanner">
+            </div>
+        </label>
+        <input type="file" id="file-upload" style="display: none;">
+
+        <div class="name-section" id="edit-name-details">
+
+            <div class="profile-details">
+                <img src="/assets/profile.png" alt="" class="myprofile">
+                <div id="nameDisplay"><h3>Buddhadeb Koner</h3></div>
+                <input type="text" id="nameInput" style="display: none;">
+
+            </div>
+            <div class="profile-btns">
+                <button id="editBtn">
+                    <img src="/assets/icons/edit.svg" alt="">
+                </button>
+                <button id="saveBtn" style="visibility: hidden;">
+                    <img src="/assets/icons/save.svg" alt="">
+                </button>
+            </div>
+
+        </div>
+        <div class="about-section">
+            <div class="about-box">
+                <h3>About</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, magnam.</p>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h3>
+                Contact:
+                <a href="mailto:example@gmail.com">example@gmail.com</a>
+            </h3>
+        </div>
+    </div>
+
+    <div class="message-container" style="display: flex;visibility: hidden;">
+        <img src="/assets/icons/dangerous.svg" alt="">
+        <p class="notify-mess-text">This is not message</p>
+    </div>
+
+</body>
+
+<script src="/script/script.js"></script>
+
+</html>
