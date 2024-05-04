@@ -9,17 +9,35 @@ body {
     padding: 0;
     margin: 0;
     background-color: #caf0f8;
+    font-family:Arial, Helvetica, sans-serif;
 }
-button{
+.full-app-container{
+    position: relative;
+    width: fit-content;
+    display: flex;
+    gap: 10px;
+}
+
+button {
     appearance: none;
-  border: none;
-  background: none;
-  padding: 0;
-  margin: 0;
-  font: inherit;
-  color: inherit;
-  cursor: pointer;
-  outline: none;
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    outline: none;
+}
+
+.profile-btns, 
+.btn-container {
+    width: 80px;
+    height: fit-content;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .container {
@@ -37,7 +55,7 @@ button{
 }
 
 
-#file-preview {
+#file-preview-banner {
     width: 100%;
     height: fit-content;
     display: flex;
@@ -54,7 +72,7 @@ button{
     transition: opacity 0.3s ease;
 }
 
-.blur-box {
+.blur-box-banner {
     position: absolute;
     width: 100%;
     height: 260px;
@@ -63,11 +81,17 @@ button{
     transition: opacity 0.3s ease;
 }
 
-#file-preview:hover .upload-image-para {
+
+
+.upload-image-para {
+    z-index: 999;
+}
+
+#file-preview-banner:hover .upload-image-para {
     opacity: 1;
 }
 
-#file-preview:hover .blur-box {
+#file-preview-banner:hover .blur-box-banner {
     opacity: 0.2;
 }
 
@@ -97,22 +121,43 @@ button{
 
 /* name section  */
 
-.name-section{
+.editBtn-icon {
+    display: none;
+}
+
+.name-section:hover .editBtn-icon {
+    display: block;
+}
+
+#nameInputProfile {
+    all: unset;
+    border: 0.5px solid white;
+    font-size: 19px;
+    width: 200px;
+    font-weight: bold;
+}
+
+.name-section {
     width: 100%;
     height: fit-content;
     background-color: transparent;
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: space-between;
     gap: 15px;
 }
-.profile-btns{
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+#nameDisplay {
+    width: 100%;
+    height: fit-content;
 }
-.profile-details{
+
+#nameDisplay h3 {
+    cursor: pointer;
+}
+
+
+.profile-details {
     width: fit-content;
     height: fit-content;
     display: flex;
@@ -125,11 +170,31 @@ button{
     margin: 10px;
     width: 60px;
     border-radius: 50%;
+    cursor: pointer;
 }
+
+.blur-box-profile {
+    position: absolute;
+    margin: 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: black;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.blur-box-profile:hover {
+    opacity: 0.2;
+}
+
+
 
 /* notification */
 
-.message-container{
+.message-container {
     margin-top: 10px;
     width: fit-content;
     height: 60px;
@@ -140,3 +205,92 @@ button{
     justify-content: space-evenly;
     border-radius: 10px;
 }
+
+.message-container img {
+    padding-right: 10px;
+}
+
+
+/* Design of About section */
+
+
+.btn-container{
+    position: absolute;
+    right: 0px;
+}
+
+.about-section {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-section h3 {
+    margin: 10px 0 10px 0;
+    text-align: center;
+}
+
+.About-edit-btns {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#AboutDisplay {
+    text-align: center;
+}
+
+#AboutDisplay p{
+    margin: 0 10px 0 10px;
+}
+
+#AboutInput {
+    all: unset;
+    width: 90%;
+    margin: 0 10px 0 10px;
+    height: 50px;
+    border: 1px solid white;
+    font-size: 20px;
+}
+
+.editBtn-icon-About {
+    display: none;
+}
+
+.about-section:hover .editBtn-icon-About {
+    display: block;
+}
+
+#downloadBtn{
+    position: absolute;
+    right: 0;
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+/*Footer section*/
+
+.footer-section{
+    width: 90%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin: 0 10px 0 10px;
+}
+#editBtnContact{
+    display: none;
+}
+
+.footer-section:hover #editBtnContact{
+    display: block;
+}
+
+

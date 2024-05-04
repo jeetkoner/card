@@ -2,63 +2,111 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+	<link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+		integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
-    <div class="container">
+	<div class="full-app-container">
+		<div class="container">
+			<label for="file-upload-banner" id="upload-label">
+				<div id="file-preview-banner">
+					<div class="blur-box-banner"></div>
+					<p class="upload-image-para">Upload image</p>
+					<img src="./assets/banner.jpg" alt="" class="mybanner">
+				</div>
+			</label>
 
-        <label for="file-upload" id="upload-label">
-            <div id="file-preview">
-                <div class="blur-box"></div>
-                <p class="upload-image-para">Upload image</p>
-                <img src="/assets/banner.jpg" alt="" class="mybanner">
-            </div>
-        </label>
-        <input type="file" id="file-upload" style="display: none;">
+			<input type="file" id="file-upload-banner" style="display: none;">
 
-        <div class="name-section" id="edit-name-details">
+			<div class="name-section" id="edit-name-details">
 
-            <div class="profile-details">
-                <img src="/assets/profile.png" alt="" class="myprofile">
-                <div id="nameDisplay"><h3>Buddhadeb Koner</h3></div>
-                <input type="text" id="nameInput" style="display: none;">
+				<div class="profile-details">
+					<label for="file-upload-profile" id="">
+						<div id="file-preview-profile">
+							<div class="blur-box-profile"></div>
+							<img src="./assets/profile.png" alt="" class="myprofile">
+						</div>
+					</label>
 
-            </div>
-            <div class="profile-btns">
-                <button id="editBtn">
-                    <img src="/assets/icons/edit.svg" alt="">
-                </button>
-                <button id="saveBtn" style="visibility: hidden;">
-                    <img src="/assets/icons/save.svg" alt="">
-                </button>
-            </div>
+					<div id="nameDisplay">
+						<h3>Buddhadeb Koner</h3>
+					</div>
+					<input type="text" id="nameInputProfile" style="display: none;">
+				</div>
 
-        </div>
-        <div class="about-section">
-            <div class="about-box">
-                <h3>About</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, magnam.</p>
-            </div>
-        </div>
-        <div class="footer-section">
-            <h3>
-                Contact:
-                <a href="mailto:example@gmail.com">example@gmail.com</a>
-            </h3>
-        </div>
-    </div>
+				<input type="file" id="file-upload-profile" style="display: none;">
 
-    <div class="message-container" style="display: flex;visibility: hidden;">
-        <img src="/assets/icons/dangerous.svg" alt="">
-        <p class="notify-mess-text">This is not message</p>
-    </div>
+				<div class="profile-btns">
+					<button id="editBtnProfile" class="editBtn-icon">
+						<img src="./assets/icons/edit.svg" alt="">
+					</button>
+					<button id="saveBtnProfile" style="display: none;">
+						<img src="./assets/icons/save.svg" alt="">
+					</button>
+				</div>
 
+			</div>
+
+			<div class="about-section">
+				<div class="About-edit-btns">
+					<div class="btn-container">
+						<button id="editBtnAbout" class="editBtn-icon-About">
+							<img src="./assets/icons/edit.svg" alt="">
+						</button>
+						<button id="saveBtnAbout" style="display: none;">
+							<img src="./assets/icons/save.svg" alt="">
+						</button>
+					</div>
+					<h3>About</h3>
+				</div>
+				<div id="AboutDisplay">
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
+						consectetur sint veritatis,
+						nihil
+						perferendis corporis officiis quam atque, illum recusandae, et soluta
+						molestiae libero
+						voluptatum
+						voluptas necessitatibus. Reiciendis, nam animi.</p>
+				</div>
+				<input type="text" id="AboutInput" style="display: none;">
+			</div>
+
+			<div class="footer-section">
+				<h4>Contact &nbsp</h4>
+
+				<div id="ContactDisplay">
+					<a href="mailto:example@gmail.com">example@gmail.com</a>
+				</div>
+
+				<input type="text" id="ContactInput" style="display: none;">
+				<div class="btn-container">
+					<button id="editBtnContact" class="editBtn-icon-contact">
+						<img src="./assets/icons/edit.svg" alt="">
+					</button>
+					<button id="saveBtnContact" style="display: none;">
+						<img src="./assets/icons/save.svg" alt="">
+					</button>
+				</div>
+			</div>
+
+		</div>
+		<button id="downloadBtn">
+			<img src="./assets/icons/download.svg" alt="">
+		</button>
+	</div>
+	<div class="message-container" style="display: flex; visibility: hidden;">
+		<img src="./assets/icons/dangerous.svg" alt="">
+		<p class="notify-mess-text">This is not message</p>
+	</div>
+
+	<script src="script.js"></script>
 </body>
-
-<script src="script.js"></script>
 
 </html>
